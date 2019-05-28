@@ -15,7 +15,7 @@ app.use(express.static(__dirname + '/public'));
 const clientId =  process.env.CLIENT_ID,
         scopes = ['user-read-private', 'user-read-email'],
   clientSecret =  process.env.CLIENT_SECRET,
-   redirectUri = 'http://localhost:5000/users/auth/spotify/redirect';
+   redirectUri = '165.22.107.55/users/auth/spotify/redirect';
  
 // Create the api object with the credentials
 var spotifyApi = new SpotifyWebApi({
