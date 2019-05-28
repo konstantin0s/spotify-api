@@ -15,7 +15,7 @@ app.use(express.static(__dirname + '/public'));
 const clientId =  process.env.CLIENT_ID,
         scopes = ['user-read-private', 'user-read-email'],
   clientSecret =  process.env.CLIENT_SECRET,
-   redirectUri = 'http://localhost:3000/users/auth/spotify/redirect';
+   redirectUri = 'http://localhost:5000/users/auth/spotify/redirect';
  
 // Create the api object with the credentials
 var spotifyApi = new SpotifyWebApi({
@@ -114,5 +114,10 @@ const index = require('./routes/index');
 app.use('/', index);
 
  
+app.set( 'port', ( process.env.PORT || 5000 ));
 
-app.listen(3000, () => console.log("My Spotify project running on port 3000 🎧 🥁 🎸 🔊"));
+// Start node server
+app.listen( app.get( 'port' ), function() {
+  console.log( '"My Spotify project running on port 5000 🎧 🥁 🎸 🔊") ' + app.get( 'port' ));
+  });
+
