@@ -15,15 +15,15 @@ app.use(express.static(__dirname + '/public'));
 const clientId =  process.env.CLIENT_ID,
         scopes = ['user-read-private', 'user-read-email'],
   clientSecret =  process.env.CLIENT_SECRET,
-   redirectUri = '165.22.107.55/users/auth/spotify/redirect';
- 
+   redirectUri = 'localhost:5000/users/auth/spotify/redirect';
+
 // Create the api object with the credentials
 var spotifyApi = new SpotifyWebApi({
   clientId: clientId,
   clientSecret: clientSecret,
   redirectUri: redirectUri
 });
- 
+
 
 var authorizeURL = spotifyApi.createAuthorizeURL(scopes);
 
@@ -39,7 +39,7 @@ app.get('/users/auth/spotify/redirect', (req, res) => {
       console.log('The token expires in ' + data.body['expires_in']);
       console.log('The access token is ' + data.body['access_token']);
       console.log('The refresh token is ' + data.body['refresh_token']);
-   
+
       // Set the access token on the API object to use it in later calls
       spotifyApi.setAccessToken(data.body['access_token']);
       spotifyApi.setRefreshToken(data.body['refresh_token']);
@@ -47,7 +47,7 @@ app.get('/users/auth/spotify/redirect', (req, res) => {
       .then(function(data) {
         res.render('callback', {data})
         console.log(data);
-      }) 
+      })
     },
     function(err) {
       console.log('Something went wrong!', err);
@@ -61,7 +61,7 @@ spotifyApi.clientCredentialsGrant().then(
   function(data) {
     console.log('The access token expires in ' + data.body['expires_in']);
     console.log('The access token is ' + data.body['access_token']);
- 
+
     // Save the access token so that it's used in future calls
     spotifyApi.setAccessToken(data.body['access_token']);
   },
@@ -105,7 +105,7 @@ app.get('/tracks/:trackId', (req, res, next) => {
       // res.send(data);
       res.locals.tracksArray = data.body.items
       res.render("tracks");
-  }) 
+  })
   .catch(err => next(err));
 });
 
@@ -113,11 +113,10 @@ app.get('/tracks/:trackId', (req, res, next) => {
 const index = require('./routes/index');
 app.use('/', index);
 
- 
+
 app.set( 'port', ( process.env.PORT || 5000 ));
 
 // Start node server
 app.listen( app.get( 'port' ), function() {
   console.log( '"My Spotify project running on port 5000 🎧 🥁 🎸 🔊") ' + app.get( 'port' ));
   });
-
