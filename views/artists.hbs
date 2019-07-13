@@ -1,19 +1,27 @@
+<div class="container">
+  <h1>List of Artists:</h1>
+  <div class="cards" id="album-list">
+    {{#each artists}}
+    {{!-- <div class="card">
+      <img class="img" src="{{this.images.[1].url}}">
+      <li class="list-group-item">{{this.name}} <a href="/albums/{{this.id}}">View More</a></li>
+    </div> --}}
 
-
-                         
-                         <h1>List of Artists:</h1>
-    <div class="cards">
-     {{#each artists}}
     <div class="card">
-    <li class="list-group-item">{{this.name}} <a href="/albums/{{this.id}}">View More</a></li>
-       {{!-- <a class="list" href="/artist/">{{this.name}}</a> --}}
-   <img class="img" src="{{this.images.[1].url}}">
+      <img class="img" src="{{this.images.[1].url}}">
+      <div class="card-body">
+        <h5 class="card-title">{{this.name}}</h5>
+        <p class="card-text">{{this.albums}}</p>
+        <a href="/albums/{{this.id}}" class="btn btn-primary">View More</a>
+      </div>
     </div>
-     {{/each}}
+    {{/each}}
+  </div>
 
-     {{#if artists}}
-      <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+  {{#if artists}}
+  <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
+      aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarCollapse">
@@ -21,12 +29,13 @@
         <li class="nav-item active">
           <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
         </li>
-      <ul class="navbar-nav mr-auto">
+        {{!-- <ul class="navbar-nav mr-auto">
         <li class="nav-item"><a class="nav-link" href="/">Sign up</a></li>
          <li class="nav-item"><a class="nav-link" href="/">Login</a></li>
          <li class="nav-item"><a class="nav-link" href="/">Search<a></li>
-  </ul>
+  </ul> --}}
     </div>
+    <h1>Welcome to Spotify!</h1>
   </nav>
 
-     {{/if}}
+  {{/if}}
