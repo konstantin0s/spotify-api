@@ -1,285 +1,325 @@
-body {
-  padding: 5px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
-  overflow-x: hidden;
-  background-color: lightblue;
-}
+ * {
+   box-sizing: border-box;
+ }
 
-.navbar {
-  display: flex;
-  flex-direction: row;
-  width: 100%;
-}
+ body {
+   padding: 5px;
+   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+   overflow-x: hidden;
+   background-color: lightblue;
+   width: 100%;
+   height: 100%;
+   margin: 0;
+   padding: 0;
+ }
 
-.navbar h1 {
-  position: relative;
-  top: 10px;
-  text-align: center;
-  /* left: -20%; */
-  font-size: 18px;
-  color: white;
-  font-weight: 600;
-  padding: 0;
-  float: right;
-}
+ .navbar {
+   display: flex;
+   flex-direction: row;
+   width: 100%;
+ }
 
-
-.container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  align-content: center;
-  margin-top: 100px;
-}
-
-.container>h1 {
-  position: absolute;
-  top: 100px;
-  margin-bottom: 100px;
-}
-
-.container #form {
-  display: flex;
-  flex-direction: column;
-  width: 50%;
-  cursor: pointer;
-  top: 150px;
-}
-
-a {
-  color: #00B7FF;
-}
-
-.nav-link {
-  color: white;
-  position: relative;
-
-}
-
-#form {
-  margin: 30px auto;
-  width: 380px;
-  position: relative;
-  top: 500px;
-}
-
-#form label {
-  color: #666;
-  display: inline-block;
-  margin-bottom: 10px;
-  text-align: center;
-  width: 100%;
-}
-
-#form input,
-#form button {
-  box-sizing: border-box;
-  font-size: 14px;
-  outline: 0;
-  padding: 4px;
-  width: 100%;
-  margin-bottom: 20px;
-}
-
-#form button {
-  background: #43a3e6;
-  border: 1px solid #43a3e6;
-  border-radius: 4px;
-  color: #fff;
-  cursor: pointer;
-  display: inline-block;
-  font-size: 14px;
-  padding: 8px 16px;
-  text-decoration: none;
-  text-transform: uppercase;
-  transition: .3s ease background;
-  width: 100%;
-}
-
-#form button:hover {
-  background: #fff;
-  color: #43a3e6;
-  transition: .3s ease background;
-}
-
-.error-message {
-  background: #F02B63;
-  box-sizing: border-box;
-  color: #fff;
-  margin: 20px auto;
-  padding: 20px;
-  width: 20%;
-}
-
-.cards {
-  position: absolute;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  width: 100%;
-  top: 100px;
-  margin: 5px;
-  padding: 5px;
-}
-
-.cards .card {
-  width: 30%;
-  height: 40%;
-  margin: 1px;
-  margin-bottom: 50px;
-  padding: 10px;
-  left: -15px;
-}
-
-.card:hover {
-  -webkit-transition: opacity .25s ease-in-out;
-  -moz-transition: opacity .25s ease-in-out;
-  -ms-transition: opacity .25s ease-in-out;
-  -o-transition: opacity .25s ease-in-out;
-  transition: opacity .25s ease-in-out;
-  -moz-box-shadow: 3px 3px 5px 6px #ccc;
-  -webkit-box-shadow: 3px 3px 5px 6px #ccc;
-  box-shadow: 3px 3px 5px 6px #ccc;
-  -webkit-transform: scale(.98);
-  -ms-transform: scale(.98);
-  transform: scale(.98);
-  cursor: pointer;
-}
+ .navbar h1 {
+   position: relative;
+   top: 10px;
+   text-align: center;
+   /* left: -20%; */
+   font-size: 18px;
+   color: white;
+   font-weight: 600;
+   padding: 0;
+   float: right;
+ }
 
 
-#album-list {
-  position: relative;
-  display: flex;
-  width: 100%;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
-}
+ .container {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   align-content: center;
+   margin-top: 10px;
+   min-width: 100% !important;
+   height: 100vh;
+   position: relative;
+ }
 
-.tracks {
-  text-align: center;
-  align-items: center;
-  padding: 5px;
+ .container-x {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   align-content: center;
+   margin-top: 10px;
+   min-width: 100% !important;
+   height: 100vh;
+   position: relative;
+ }
 
-}
-
-.container h2 {
-  position: absolute;
-  top: 70px;
-  text-align: center;
-}
-
-
-.page-footer {
-  position: fixed;
-  bottom: 0;
-  color: white;
-}
-
-@media only screen and (max-width: 600px) {
-  body {
-    background-color: lightblue;
-  }
-
-  .navbar {
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-  }
-
-  .navbar h1 {
-    position: absolute;
-    top: 10px;
-    text-align: center;
-    font-size: 18px;
-    color: white;
-    font-weight: 600;
-    padding: 0;
-  }
-
-  .container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    align-content: center;
-  }
-
-  .container #form {
-    display: flex;
-    flex-direction: column;
-    width: 50%;
-    cursor: pointer;
-    top: 150px;
-  }
-
-  .cards .card {
-    width: 60%;
-    height: 40%;
-    margin: 1px;
-    margin-bottom: 50px;
-    padding: 10px;
-  }
-
-  #album-list {
-    position: relative;
-    display: flex;
-    width: 100%;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-  }
+ .img-1 {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   align-content: center;
+   margin-top: 10px;
+   min-width: 100% !important;
+   height: 100vh;
+   position: relative;
+   background-image: url(/img/cassette.jpg), url(/img/huitar.jpg), url(/img/records.jpg), url(/img/left.jpg),
+     url(/img/right.jpg);
+   background-position: center top, right top, center bottom, left bottom, right bottom;
+   background-repeat: no-repeat, repeat-x, repeat-y, repeat-y, repeat-y;
+ }
 
 
-}
+ .container>h1 {
+   position: absolute;
+   top: 100px;
+   margin-bottom: 100px;
+ }
+
+ .container-x #form {
+   display: flex;
+   flex-direction: column;
+   width: 50%;
+   cursor: pointer;
+   top: 150px;
+   position: absolute;
+   z-index: 100;
+ }
+
+ a {
+   color: #00B7FF;
+ }
+
+ .nav-link {
+   color: white;
+   position: relative;
+
+ }
+
+ #form {
+   margin: 30px auto;
+   width: 380px;
+   position: relative;
+   top: 500px;
+ }
+
+ #form label {
+   color: #666;
+   display: inline-block;
+   margin-bottom: 10px;
+   text-align: center;
+   width: 100%;
+ }
+
+ #form input,
+ #form button {
+   box-sizing: border-box;
+   font-size: 14px;
+   outline: 0;
+   padding: 4px;
+   width: 100%;
+   margin-bottom: 20px;
+ }
+
+ #form button {
+   background: #43a3e6;
+   border: 1px solid #43a3e6;
+   border-radius: 4px;
+   color: #fff;
+   cursor: pointer;
+   display: inline-block;
+   font-size: 14px;
+   padding: 8px 16px;
+   text-decoration: none;
+   text-transform: uppercase;
+   transition: .3s ease background;
+   width: 100%;
+ }
+
+ #form button:hover {
+   background: #fff;
+   color: #43a3e6;
+   transition: .3s ease background;
+ }
+
+ .error-message {
+   background: #F02B63;
+   box-sizing: border-box;
+   color: #fff;
+   margin: 20px auto;
+   padding: 20px;
+   width: 20%;
+ }
+
+ .cards {
+   position: absolute;
+   display: flex;
+   flex-direction: row;
+   flex-wrap: wrap;
+   justify-content: space-around;
+   width: 100%;
+   top: 100px;
+   margin: 5px;
+   padding: 5px;
+ }
+
+ .cards .card {
+   width: 30%;
+   height: 40%;
+   margin: 1px;
+   margin-bottom: 50px;
+   padding: 10px;
+   left: -15px;
+ }
+
+ .card:hover {
+   -webkit-transition: opacity .25s ease-in-out;
+   -moz-transition: opacity .25s ease-in-out;
+   -ms-transition: opacity .25s ease-in-out;
+   -o-transition: opacity .25s ease-in-out;
+   transition: opacity .25s ease-in-out;
+   -moz-box-shadow: 3px 3px 5px 6px #ccc;
+   -webkit-box-shadow: 3px 3px 5px 6px #ccc;
+   box-shadow: 3px 3px 5px 6px #ccc;
+   -webkit-transform: scale(.98);
+   -ms-transform: scale(.98);
+   transform: scale(.98);
+   cursor: pointer;
+ }
 
 
-@media only screen and (max-width: 778px) and (min-width: 601px) {
-  body {
-    background-color: lightblue;
-  }
+ #album-list {
+   position: relative;
+   display: flex;
+   width: 100%;
+   flex-direction: row;
+   flex-wrap: wrap;
+   justify-content: space-evenly;
+ }
 
-  .navbar {
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-  }
+ .tracks {
+   text-align: center;
+   align-items: center;
+   padding: 5px;
 
-  .container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    align-content: center;
-  }
+ }
 
-  .container #form {
-    display: flex;
-    flex-direction: column;
-    width: 30%;
-    cursor: pointer;
-    top: 150px;
-  }
-
-  .cards .card {
-    width: 40%;
-    height: 40%;
-    margin: 1px;
-    margin-bottom: 50px;
-    padding: 10px;
-    left: -15px;
-  }
-
-  #album-list {
-    position: relative;
-    display: flex;
-    width: 100%;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-  }
+ .container h2 {
+   position: absolute;
+   top: 70px;
+   text-align: center;
+ }
 
 
-}
+ .page-footer {
+   position: fixed;
+   bottom: 0;
+   color: white;
+ }
+
+ @media only screen and (max-width: 600px) {
+   body {
+     background-color: lightblue;
+   }
+
+   .navbar {
+     display: flex;
+     flex-direction: row;
+     width: 100%;
+   }
+
+   .navbar h1 {
+     position: absolute;
+     top: 10px;
+     text-align: center;
+     font-size: 18px;
+     color: white;
+     font-weight: 600;
+     padding: 0;
+   }
+
+   .container {
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     align-content: center;
+   }
+
+   .container #form {
+     display: flex;
+     flex-direction: column;
+     width: 50%;
+     cursor: pointer;
+     top: 150px;
+   }
+
+   .cards .card {
+     width: 60%;
+     height: 40%;
+     margin: 1px;
+     margin-bottom: 50px;
+     padding: 10px;
+   }
+
+   #album-list {
+     position: relative;
+     display: flex;
+     width: 100%;
+     flex-direction: row;
+     flex-wrap: wrap;
+     justify-content: space-evenly;
+   }
 
 
-/*# sourceMappingURL=style.css.map */
+ }
+
+
+ @media only screen and (max-width: 778px) and (min-width: 601px) {
+   body {
+     background-color: lightblue;
+   }
+
+   .navbar {
+     display: flex;
+     flex-direction: row;
+     width: 100%;
+   }
+
+   .container {
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     align-content: center;
+   }
+
+   .container #form {
+     display: flex;
+     flex-direction: column;
+     width: 30%;
+     cursor: pointer;
+     top: 150px;
+   }
+
+   .cards .card {
+     width: 40%;
+     height: 40%;
+     margin: 1px;
+     margin-bottom: 50px;
+     padding: 10px;
+     left: -15px;
+   }
+
+   #album-list {
+     position: relative;
+     display: flex;
+     width: 100%;
+     flex-direction: row;
+     flex-wrap: wrap;
+     justify-content: space-evenly;
+   }
+
+
+ }
+
+
+ /*# sourceMappingURL=style.css.map */
