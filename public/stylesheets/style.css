@@ -67,6 +67,7 @@
      url(/img/right.jpg);
    background-position: center top, right top, center bottom, left bottom, right bottom;
    background-repeat: no-repeat, repeat-x, repeat-y, repeat-y, repeat-y;
+   top: -45px;
  }
 
 
