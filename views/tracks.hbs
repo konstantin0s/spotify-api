@@ -3,15 +3,13 @@
 
 <div class="container">
   <div class="tracks">
-    <ul class="tracks-list"></ul>
-    {{#each tracksArray}}
-    <li class="list-group-item">
-      <h3>{{this.name}}</h3>
-      <audio controls="" name="media">
+    <ul class="tracks-list">
+         {{#each tracksArray}}
+  <li class="list-group-item one-track">
+        <h3>{{this.name}}</h3>
+        <audio controls="" name="media">
         <source src="{{preview_url}}" type="audio/mpeg"></audio>
-
     </li>
-
     {{/each}}
     </ul>
   </div>

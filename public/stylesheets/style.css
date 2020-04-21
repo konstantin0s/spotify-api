@@ -334,6 +334,35 @@ a {
 	text-align: center;
 	align-items: center;
 	padding: 5px;
+	position: relative;
+	width: 48%;
+	top: -60px;
+	height: 400px;
+	background: url(/img/abs.jpg) no-repeat;
+	border-bottom-right-radius: .25rem;
+	border-bottom-left-radius: .25rem;
+}
+
+.tracks-list {
+	position: absolute;
+	top: 236px;
+	left: 0;
+	min-width: 100%;
+}
+
+.one-track {
+	width: 100%;
+	position: absolute;
+	left: 0;
+	border-bottom-right-radius: 0rem;
+	border-bottom-left-radius: 0rem;
+	background-color: #1f1142;
+	color: #fff;
+}
+
+.one-track audio {
+	background: #3b1599;
+	border-radius: 3em;
 }
 
 .container h2 {
