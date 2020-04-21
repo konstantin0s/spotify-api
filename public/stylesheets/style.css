@@ -2,11 +2,19 @@
 	box-sizing: border-box;
 }
 
+html {
+	height: 100%;
+}
+
 body {
 	padding: 5px;
 	font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 	overflow-x: hidden;
-	background-color: lightblue;
+	background: url(/img/audio.jpg) no-repeat center center fixed;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
 	width: 100%;
 	height: 100%;
 	margin: 0;
@@ -23,7 +31,6 @@ body {
 	position: relative;
 	top: 10px;
 	text-align: center;
-	/* left: -20%; */
 	font-size: 18px;
 	color: white;
 	font-weight: 600;
@@ -40,6 +47,13 @@ body {
 	min-width: 100% !important;
 	height: 100vh;
 	position: relative;
+}
+
+.container-artists {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	width: 100%;
 }
 
 .container-x {
@@ -254,27 +268,26 @@ a {
 
 /* end of seach bar style */
 
-/* 
- #form button {
-   background: #43a3e6;
-   border: 1px solid #43a3e6;
-   border-radius: 4px;
-   color: #fff;
-   cursor: pointer;
-   display: inline-block;
-   font-size: 14px;
-   padding: 8px 16px;
-   text-decoration: none;
-   text-transform: uppercase;
-   transition: .3s ease background;
-   width: 100%;
- }
+.album-title {
+	position: relative;
+	background: #fff;
+	top: 20px;
+	width: 100%;
+	height: 150px;
+	text-align: center;
+	display: flex;
+	justify-content: center;
+}
 
- #form button:hover {
-   background: #fff;
-   color: #43a3e6;
-   transition: .3s ease background;
- } */
+.album-title h2 {
+	text-align: center;
+	border-bottom: 3px solid yellow;
+	/* width: 55%; */
+	position: relative;
+	align-self: center;
+	top: 5px;
+	font-size: 1.3em;
+}
 
 .error-message {
 	background: #f02b63;
@@ -302,8 +315,61 @@ a {
 	height: 40%;
 	margin: 1px;
 	margin-bottom: 50px;
-	padding: 10px;
+	padding: 3px 3px 0px 3px;
 	left: -15px;
+}
+
+.card-body {
+	width: 100%;
+	position: relative;
+	padding: 1.25rem 0rem;
+	align-self: center;
+	text-align: center;
+}
+
+.card-body p {
+	position: relative;
+	margin: 0.5em;
+	left: 0.5em;
+	display: flex;
+}
+
+.card-body .card-title {
+	display: flex;
+	flex-direction: row;
+	font-size: 1em;
+	font-weight: bold;
+	text-align: center;
+	margin: 0em 1em;
+	align-self: center;
+}
+
+.next-btn {
+	width: 100%;
+	height: 50px;
+	position: relative;
+	bottom: -20px;
+}
+
+.next-btn .tracking {
+	background-color: #22b0b5;
+	width: 100%;
+	height: 50px;
+	color: #fff;
+	left: 0px;
+	font-size: 1.2em;
+	text-align: center;
+	position: absolute;
+	text-decoration: none;
+	align-items: center;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+}
+
+.next-btn .tracking:hover {
+	transform: scale(1.03);
+	background-color: yellowgreen;
 }
 
 .card:hover {
@@ -322,7 +388,8 @@ a {
 }
 
 #album-list {
-	position: relative;
+	position: absolute;
+	top: 165px;
 	display: flex;
 	width: 100%;
 	flex-direction: row;
@@ -418,11 +485,12 @@ a {
 		height: 40%;
 		margin: 1px;
 		margin-bottom: 50px;
-		padding: 10px;
+		padding: 3px 3px 0px 3px;
+		/* padding: 10px; */
 	}
 
 	#album-list {
-		position: relative;
+		position: absolute;
 		display: flex;
 		width: 100%;
 		flex-direction: row;

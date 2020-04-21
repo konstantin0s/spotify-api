@@ -90,7 +90,8 @@ app.get('/albums/:artistId', (req, res, next) => {
 
   spotifyApi.getArtistAlbums(artistId)
     .then(data => {
-      res.locals.albumArray = data.body.items
+      res.locals.albumArray = data.body.items;
+      console.log(data.body.items);
       res.render('album');
     })
     .catch(err => next(err));
@@ -103,7 +104,8 @@ app.get('/tracks/:trackId', (req, res, next) => {
   spotifyApi.getAlbumTracks(trackId)
     .then(data => {
       // res.send(data);
-      res.locals.tracksArray = data.body.items
+      res.locals.tracksArray = data.body.items;
+      console.log(data.body.items);
       res.render("tracks");
     })
     .catch(err => next(err));

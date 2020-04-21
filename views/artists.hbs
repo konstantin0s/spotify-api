@@ -1,17 +1,3 @@
-<div class="container">
-  <h1>List of Artists:</h1>
-  <div class="cards" id="album-list">
-    {{#each artists}}
-    <div class="card">
-      <img class="img" src="{{this.images.[1].url}}">
-      <div class="card-body">
-        <h5 class="card-title">{{this.name}}</h5>
-        <p class="card-text">{{this.albums}}</p>
-        <a href="/albums/{{this.id}}" class="btn btn-primary">View More</a>
-      </div>
-    </div>
-    {{/each}}
-  </div>
 
   {{#if artists}}
   <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
@@ -22,11 +8,29 @@
     <div class="collapse navbar-collapse" id="navbarCollapse">
       <ul class="navbar-nav mr-auto">
         <li class="nav-item active">
-          <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+          <a class="nav-link" href="/">SpotiFly <span class="sr-only">(current)</span></a>
         </li>
     </div>
-    <h1>Welcome to SpotiFly 
-    </h1>
+    <h1>Artists</h1>
   </nav>
-
   {{/if}}
+
+
+  <div class="container-artists">
+      <div class="album-title">
+    <h2 ><br />List of artists:</h2>
+  </div>
+  <div class="cards" id="album-list">
+    {{#each artists}}
+    <div class="card">
+      <img class="img" src="{{this.images.[1].url}}">
+      <div class="card-body">
+        <h5 class="card-title">{{this.name}}</h5>
+        <p class="card-text">Popularity: {{this.popularity}}</p>
+           <div class="next-btn">
+          <a href="/albums/{{this.id}}" class="tracking">View Album</a>
+       </div>
+      </div>
+    </div>
+    {{/each}}
+  </div>
