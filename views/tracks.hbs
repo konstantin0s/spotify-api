@@ -1,5 +1,3 @@
-<h1> List Of Album's Tracks:</h1>
-
 
 
 {{#if tracksArray}}
@@ -14,16 +12,23 @@
         <a class="nav-link" href="/">SpotiFly <span class="sr-only">(current)</span></a>
       </li>
   </div>
-  <h1>Track</h1>
+  <h2 class="tk-title">Track</h2>
 </nav>
 {{/if}}
 
+<div class="container-album">
+  <div class="album-title">
+    <h2 ><br />{{tracksArray.[0].artists.[0].name}}</h2>
+  </div>
 
-<div class="container">
+<div class="conta">
   <div class="tracks">
     <ul class="tracks-list">
          {{#each tracksArray}}
   <li class="list-group-item one-track">
+        <p class="skin">
+          <!-- adding a background image for each track(from css) -->
+        </p>
         <h3>{{this.name}}</h3>
         <audio controls="" name="media">
         <source src="{{preview_url}}" type="audio/mpeg"></audio>

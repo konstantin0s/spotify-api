@@ -105,7 +105,7 @@ app.get('/tracks/:trackId', (req, res, next) => {
     .then(data => {
       // res.send(data);
       res.locals.tracksArray = data.body.items;
-      console.log(data.body.items);
+      console.log('tracks id', data.body.items);
       res.render("tracks");
     })
     .catch(err => next(err));
