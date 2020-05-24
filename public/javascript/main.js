@@ -81,7 +81,7 @@ function autocomplete(inp, arr) {
 
 
     if (searchInput.value === '') {
-        console.log('skip this baby')
+        console.log('Welcome to spotify :)')
     } else {
         autocomplete(searchInput.value);
     }

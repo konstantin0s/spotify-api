@@ -7,7 +7,6 @@ html {
 }
 
 body {
-	padding: 5px;
 	font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 	overflow-x: hidden;
 	background: url(/img/audio.jpg) no-repeat center center fixed;
@@ -83,7 +82,7 @@ body {
 	top: -45px;
 }
 
-.container > h1 {
+.container>h1 {
 	position: absolute;
 	top: 100px;
 	margin-bottom: 100px;
@@ -159,7 +158,7 @@ a {
 	left: 0;
 	width: 100px;
 	height: 100px;
-	background: rgb(233, 229, 17);
+	background: rgb(22, 46, 187);
 	border-radius: 50%;
 	transition: all 1s;
 	z-index: 4;
@@ -236,19 +235,19 @@ a {
 	cursor: text;
 }
 
-#search-query:focus ~ .search-x {
+#search-query:focus~.search-x {
 	right: -530px;
 	background: #151515;
 	z-index: 3;
 }
 
-#search-query:focus ~ .search-x::before {
+#search-query:focus~.search-x::before {
 	top: 0;
 	left: 0;
 	width: 25px;
 }
 
-#search-query:focus ~ .search-x::after {
+#search-query:focus~.search-x::after {
 	top: 0;
 	left: 0;
 	width: 25px;
@@ -447,6 +446,15 @@ a {
 @media only screen and (max-width: 600px) {
 	body {
 		background-color: lightblue;
+		overflow-x: hidden;
+	}
+
+	.container-x {
+		width: 100%;
+		height: 100%;
+		margin: 0;
+		padding: 0;
+		overflow-x: hidden;
 	}
 
 	.navbar {
@@ -463,6 +471,7 @@ a {
 		color: white;
 		font-weight: 600;
 		padding: 0;
+		left: 60%;
 	}
 
 	.container {
@@ -497,6 +506,25 @@ a {
 		flex-wrap: wrap;
 		justify-content: space-evenly;
 	}
+
+	.formless {
+		left: -50px;
+	}
+
+	#search-query:focus {
+		width: 300px;
+		opacity: 1;
+		cursor: text;
+	}
+
+	#search-query:focus~.search-x {
+		right: -250px;
+		background: #151515;
+		z-index: 3;
+	}
+
+
+
 }
 
 @media only screen and (max-width: 778px) and (min-width: 601px) {
